@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Accordion, Card } from 'react-bootstrap';
 import Button from '../../utils/button';
 import "./buttonRandom.css";
+import AnimatedCard from './AnimatedCard';
 const DatosSobreMi = [
   'Desarrollador de Software',
   'Amante de la tecnología',
@@ -37,9 +38,11 @@ function ButtonRandom() {
       </Button>
       {mostrarAcordeon && (
         <Accordion id="acordeon">
-          <Accordion.Item className='lacartita'eventKey="0">
+          <Accordion.Item className='lacartita' eventKey="0">
             <Card>
-              <Card.Body className='yo'>{datoActual}</Card.Body>
+              <AnimatedCard show={mostrarAcordeon}>
+                <Card.Body className='yo'>{datoActual}</Card.Body>
+              </AnimatedCard>
             </Card>
           </Accordion.Item>
         </Accordion>

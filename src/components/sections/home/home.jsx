@@ -5,7 +5,6 @@ import Button from "../../../utils/button";
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import Type from "./type";
 import ButtonRandom from "../../buttonRandom/buttonRandom";
-// import TypingAnimation from "../utils/animations/typingAnimation"
 
 
 

@@ -21,6 +21,7 @@ const About = () =>{
       <p>¡Gracias por conocerme!</p>
       <p id="signature">Facundo Cretton</p>
     </AboutText>
+    
 
         </PageWrapper>
 
