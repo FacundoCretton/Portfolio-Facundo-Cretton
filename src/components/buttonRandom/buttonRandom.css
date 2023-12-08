@@ -1,0 +1,26 @@
+/* ButtonRandom.css */
+
+/* Estilos para el contenedor del acordeón */
+#acordeon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px; /* Ajusta según sea necesario */
+}
+.lacartita {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Ajusta según sea necesario */
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+/* Estilos para el acordeón */
+#acordeon {
+  width: 500px;
+}
+
+.yo {
+  background: #d3d3d3;
+}
