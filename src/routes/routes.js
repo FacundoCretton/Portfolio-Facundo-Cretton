@@ -1,10 +1,10 @@
 import About from "../components/sections/about";
-import Projects from "../components/sections/projects";
+import Projects from "../components/sections/projects/projects";
 import Tools from "../components/sections/tools";
 import Contact from "../components/sections/contact";
 import Sidebar from "../components/sidebar/sidebar";
 import { Routes, Route } from "react-router-dom";
-import Home from "../components/sections/home";
+import Home from "../components/sections/home/home";
 
 function AppRoutes (){
 
