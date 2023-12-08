@@ -13,7 +13,7 @@
   justify-content: center;
   margin-top: 10px; /* Ajusta según sea necesario */
   flex-direction: column;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Estilos para el acordeón */
@@ -21,6 +21,6 @@
   width: 500px;
 }
 
-.yo {
+/* .yo {
   background: #d3d3d3;
-}
+} */

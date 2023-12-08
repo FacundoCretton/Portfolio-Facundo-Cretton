@@ -39,11 +39,11 @@ function ButtonRandom() {
       {mostrarAcordeon && (
         <Accordion id="acordeon">
           <Accordion.Item className='lacartita' eventKey="0">
-            <Card>
-              <AnimatedCard show={mostrarAcordeon}>
+            <AnimatedCard show={mostrarAcordeon}>
+              <Card>
                 <Card.Body className='yo'>{datoActual}</Card.Body>
-              </AnimatedCard>
-            </Card>
+              </Card>
+            </AnimatedCard>
           </Accordion.Item>
         </Accordion>
       )}
