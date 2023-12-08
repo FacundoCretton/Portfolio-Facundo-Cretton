@@ -10,7 +10,7 @@ const AnimatedCard = ({ children, show }) => {
   });
 
   const slideIn = useSpring({
-    from: { transform: 'translateY(-40px)' },
+    from: { transform: 'translateY(70px)' },
     to: { transform: 'translateY(0)' },
     reset: true,
     reverse: !show,
@@ -30,7 +30,7 @@ const AnimatedCard = ({ children, show }) => {
     from: { opacity: 0 },
     reset: true,
     reverse: !show,
-    config: { duration: 1000, stagger: 100 }, // Ajusta la duración y el espaciado según sea necesario
+    config: { duration: 1000, stagger: 100 }, // Ajusta la duración y el espaciado
   });
 
 

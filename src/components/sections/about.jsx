@@ -1,6 +1,7 @@
 import React from "react";
 import { PageWrapper } from "./sectionsStyles";
 import AboutText from "./aboutStyles";
+import ButtonRandom from "../../components/buttonRandom/buttonRandom";
 
 
 const About = () =>{
@@ -21,7 +22,8 @@ const About = () =>{
       <p>¡Gracias por conocerme!</p>
       <p id="signature">Facundo Cretton</p>
     </AboutText>
-    
+        <ButtonRandom/>
+
 
         </PageWrapper>
 

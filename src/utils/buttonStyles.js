@@ -5,15 +5,17 @@ export const StyledButton = styled.a`
   display: block;
   margin-top: 20px;
   padding: 10px;
-  background-color: #000;
-  color: #fff;
+  background-color: ${props => props.backgroundColor || "#000"};
+  color: ${props => props.textColor || "#fff"};
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
+  width: ${(props) => props.width || "auto"};
+
+  
   :last-child {
     margin-right: 0;
   }

@@ -4,7 +4,6 @@ import { ButtonsWrapper, PageWrapper } from "../sectionsStyles";
 import Button from "../../../utils/button";
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 import Type from "./type";
-import ButtonRandom from "../../buttonRandom/buttonRandom";
 
 
 
@@ -48,7 +47,6 @@ const HomePage = () =>{
             </Button>
             </ButtonsWrapper>
 
-            <ButtonRandom/>
             
         </PageWrapper>
     );
