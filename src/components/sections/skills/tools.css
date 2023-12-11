@@ -1,0 +1,57 @@
+.card-title {
+  font-size: 1em;
+  font-weight: 700;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  gap: 1em;
+}
+
+.image-style {
+  width: 50px;
+  height: 50px;
+}
+
+.veremos {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 1em;
+  max-width: 1000px;
+
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.text-img {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bgd-card {
+  background: transparent;
+}
