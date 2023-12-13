@@ -33,7 +33,11 @@ function ButtonRandom() {
 
   return (
     <div id="acordeon-container">
-      <Button variant="link" onClick={toggleAcordeon}>
+      <Button 
+        variant="link" 
+        onClick={toggleAcordeon}
+        
+      >
         {buttonText}
       </Button>
       {mostrarAcordeon && (

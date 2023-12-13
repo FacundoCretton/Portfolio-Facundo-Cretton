@@ -48,3 +48,32 @@ export const ModalContainer = styled.div`
 
 
 `;
+
+
+export const CertContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > div {
+    flex: 0 0 48%; /* Ajusta este valor para controlar el ancho de cada certificado */
+    margin: 10px;
+  }
+`;
+
+export const Rogelio = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`;
+
+export const CertContainerWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+
+
+

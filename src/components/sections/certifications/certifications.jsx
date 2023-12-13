@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { PageWrapper } from "../sectionsStyles";
 import CertificadoReact from "./cert-img/CertReact.jpg";
 import CertificadoJs from "./cert-img/CertJs.jpg";
-import { ModalContainer, ModalOverlay } from "./certificationsStyles";
+import { CertContainer, CertContainerWrapper, ModalContainer, ModalOverlay, Rogelio } from "./certificationsStyles";
 import CertificadoDW from "./cert-img/CertDW.jpg";
 import CertificadoFull from "./cert-img/CertFull.jpg";
 import CertificadoCS from "./cert-img/Certificado Ciberseguridad.png";
@@ -12,10 +12,12 @@ const certificationsData = [
   {
     title: "Certificación Diseño Web",
     imageSrc: CertificadoDW,
+    description: "Certificación Diseño Web",
   },
   {
     title: "Certificación Javascript",
     imageSrc: CertificadoJs,
+    description: "Certificación Javascript",
   },
   {
     title: "Certificación React",
@@ -95,12 +97,19 @@ const CertificationPreview = ({ title, imageSrc, description }) => {
 const Certifications = () => {
   return (
     <PageWrapper>
-      <div>
+      <Rogelio>
         <h2>Certificaciones</h2>
-        {certificationsData.map((certification, index) => (
-          <CertificationPreview key={index} {...certification} />
-        ))}
-      </div>
+        <CertContainerWrapper>
+          <CertContainer>
+            {certificationsData.map((certification, index) => (
+              <div key={index}>
+                <CertificationPreview {...certification} />
+                <p>{certification.description}</p>
+              </div>
+            ))}
+          </CertContainer>
+        </CertContainerWrapper>
+      </Rogelio>
     </PageWrapper>
   );
 };

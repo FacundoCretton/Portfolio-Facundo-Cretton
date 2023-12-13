@@ -1,17 +1,14 @@
-/* ButtonRandom.css */
-
-/* Estilos para el contenedor del acordeón */
 #acordeon-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 10px; /* Ajusta según sea necesario */
+  margin-top: 10px;
 }
 .lacartita {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Ajusta según sea necesario */
+  margin-top: 10px;
   flex-direction: column;
   margin-bottom: 150px;
 }
