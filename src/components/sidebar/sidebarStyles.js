@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const SidebarWrapper = styled.div`
     height: 100%;
     width: 250px;
@@ -11,8 +10,6 @@ export const SidebarWrapper = styled.div`
     background-color: #000;
     display: flex;
     flex-direction: column;
-
-
 `
 
 export const ProfileImage = styled.img`
@@ -25,15 +22,12 @@ export const ProfileImage = styled.img`
     margin: 1rem auto;
 `
 
-
 export const SidebarTitle = styled.h1`
-
     color: #fff;
     font-size: 1.5rem;
     margin-top: 1rem;
     text-align: center;
 `
-
 
 export const SidebarSubTitle = styled.h2`
     color: #fff;
@@ -42,15 +36,17 @@ export const SidebarSubTitle = styled.h2`
     text-align: center;
 `
 
-export const SidebarNav = styled.nav`
-
+export const SidebarNav = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 1rem;
+  overflow-y: auto; /* Habilita el desbordamiento vertical con barra de desplazamiento */
+  max-height: calc(100vh - 100px); /* Ajusta la altura máxima según sea necesario */
+  padding-top: 10px; /* Compensa el espacio de la barra de desplazamiento */
 
-  a{
+  a {
     margin: 0.5rem 0;
     padding: 0.5rem;
     width: 60%;
@@ -62,23 +58,19 @@ export const SidebarNav = styled.nav`
     font-weight: bold;
     padding: 10px;
     font-size: 1rem;
+    color: #fff; 
+    background-color: #333; 
+
     &:hover {
-      color: red;
-      text-decoration: underline;
+      color: #ddd;
+      background: rgba(255, 255, 255, 0.2);
     }
+
     &.active {
       color: #000;
       background: #D3D3D3;
     }
-
-
- 
-
-
-    
-
-
-}`
-
-
+  }
+  
+`;
 

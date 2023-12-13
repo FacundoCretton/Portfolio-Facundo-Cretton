@@ -34,14 +34,12 @@ hr {
 
 .veremos {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 0 1em;
   max-width: 1000px;
-
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -54,4 +52,17 @@ hr {
 
 .bgd-card {
   background: transparent;
+  height: 100%;
+  flex: 300px;
+  margin: 0.5em;
+}
+
+@media (max-width: 930px) {
+  .cards-container {
+    align-items: center;
+  }
+
+  .bgd-card {
+    flex: none;
+  }
 }

@@ -7,12 +7,12 @@ export const CardsStyle = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 30px;
     padding: 0 30px;
     width: 100%;
     height: 100%;
-    margin-bottom: 30px;
-
+    max-width: 1200px;
+    gap: 20px;
 `
 
 export const ButtonContainer = styled.div`

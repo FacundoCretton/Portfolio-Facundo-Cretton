@@ -8,9 +8,11 @@ import "./tools.css";
 const Tools = () =>{
 
     return(
-
+        
         <PageWrapper>
-            <h1>Tools Page </h1>
+            <h1>Herramientas y Certificaciones </h1>
+
+            <p>En esta sección podrás ver las herramientas que utilizo para desarrollar mis proyectos.</p>
             <div className="cards-container">
             
                 <Card className="bgd-card">
@@ -89,6 +91,9 @@ const Tools = () =>{
                     </Card.Body>
                 </Card>
             </div>
+
+
+            
         </PageWrapper>
     )
 

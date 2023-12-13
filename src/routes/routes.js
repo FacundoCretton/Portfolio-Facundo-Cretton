@@ -5,6 +5,7 @@ import Contact from "../components/sections/contact";
 import Sidebar from "../components/sidebar/sidebar";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/sections/home/home";
+import Certifications from "../components/sections/certifications/certifications";
 
 function AppRoutes (){
 
@@ -16,6 +17,7 @@ function AppRoutes (){
             <Route path= '/projects' element={<Projects/>}/>
             <Route path= '/tools' element={<Tools/>}/>
             <Route path = '/contact' element = {<Contact/>}/>
+            <Route path = '/certifications' element = {<Certifications/>}/>
 
         </Routes>
 

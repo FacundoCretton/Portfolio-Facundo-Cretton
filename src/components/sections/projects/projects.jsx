@@ -17,7 +17,7 @@ import Button from "../../../utils/button";
 
 const Projects = () => {
   return (
-  <>
+
   <PageWrapper>
     <div>
       <h1>Project Page </h1>
@@ -166,7 +166,7 @@ const Projects = () => {
 
     </CardsStyle>
   </PageWrapper>
-    </>
+
   );
 }
 
