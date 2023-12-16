@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 
@@ -77,3 +78,38 @@ export const CertContainerWrapper = styled.div`
 
 
 
+export const CertificationPreviewContainer = styled.div`
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+`;
+
+
+export const CertificationContainer = styled.div`
+  position: relative;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  height: auto;
+  margin-bottom: 20px; /* Espacio entre la imagen y el Accordion */
+`;
+
+export const CertificationImage = styled(motion.img)`
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
+  z-index: 1000;
+
+  &:hover {
+    scale: 1.1;
+  }
+`;
+
+export const CertificationFrame = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+
+`;

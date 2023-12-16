@@ -46,7 +46,7 @@ const HomePage = () =>{
                 Descargar CV
             </Button>
             </ButtonsWrapper>
-
+            
             
         </PageWrapper>
     );

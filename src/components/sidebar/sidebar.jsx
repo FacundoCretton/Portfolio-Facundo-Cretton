@@ -8,15 +8,19 @@ import HomeLink from "../navLinks/homeLink";
 import CertificacionesLink from "../navLinks/certificacionesLink";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import BurgerButton from "./BurgerButton";
 
 
 const Sidebar = () => {
 
     return (
+      
+
         <SidebarWrapper>
             <ProfileImage src="/images/The choose one.jpg" alt="Foto de perfil" />
             <SidebarTitle>Facundo Cretton</SidebarTitle>
             <SidebarSubTitle>Full Stack Developer</SidebarSubTitle>
+
 
             <PerfectScrollbar
                 options={{
@@ -34,6 +38,7 @@ const Sidebar = () => {
                     <HomeLink />
                     <AboutLink />
                     <ProjectsLink />
+                    
                     <ToolsLink />
                     <CertificacionesLink />
                     <ContactLink />
@@ -51,7 +56,10 @@ const Sidebar = () => {
                         background-color: "#CCCCCC" !important; 
                     }
                 `}</style>
+                
             </PerfectScrollbar>
+            <BurgerButton/>
+
         </SidebarWrapper>
     );
 }
