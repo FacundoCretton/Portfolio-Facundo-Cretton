@@ -34,5 +34,13 @@ export const ButtonsWrapper = styled.div`
     flex-flow: row wrap;
     padding: 20px;
     
+    @media (max-width: 490px) {
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+
+
+    }
 
 `;
