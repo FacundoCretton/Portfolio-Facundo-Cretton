@@ -20,6 +20,12 @@ export const PageWrapper = styled.section`
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
+    @media (max-width: 768px) {
+        margin:auto;
+
+
+    }
+
 
 `;
 

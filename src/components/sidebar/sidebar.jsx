@@ -1,67 +1,65 @@
-import React from "react";
-import { ProfileImage, SidebarNav, SidebarSubTitle, SidebarTitle, SidebarWrapper } from "./sidebarStyles";
-import AboutLink from "../navLinks/aboutLink";
-import ProjectsLink from "../navLinks/projectsLink";
-import ToolsLink from "../navLinks/toolsLink";
-import ContactLink from "../navLinks/contactLink";
-import HomeLink from "../navLinks/homeLink";
-import CertificacionesLink from "../navLinks/certificacionesLink";
-import PerfectScrollbar from "react-perfect-scrollbar";
+import React, { useEffect, useState } from "react";
+import { ProfileImage, SidebarSubTitle, SidebarTitle, SidebarWrapper, StyledButton } from "./sidebarStyles";
 import 'react-perfect-scrollbar/dist/css/styles.css'
-import BurgerButton from "./BurgerButton";
-
+import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Sidebar = () => {
-
+    const [menuToggle, setMenuToggle] = useState(false);
+  
+    const handleToggle = () => {
+      setMenuToggle(!menuToggle);
+    };
+  
+    const handleCategoryClick = () => {
+      if (window.innerWidth <= 768) {
+        setMenuToggle(false);
+      }
+    };
+  
+    useEffect(() => {
+      const handleResize = () => {
+        if (window.innerWidth > 768) {
+          setMenuToggle(false);
+        }
+      };
+  
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }, []);
+  
     return (
-      
-
-        <SidebarWrapper>
-            <ProfileImage src="/images/The choose one.jpg" alt="Foto de perfil" />
-            <SidebarTitle>Facundo Cretton</SidebarTitle>
-            <SidebarSubTitle>Full Stack Developer</SidebarSubTitle>
-
-
-            <PerfectScrollbar
-                options={{
-                    wheelSpeed: 2,
-                    wheelPropagation: false,
-                    minScrollbarLength: 20,
-                    suppressScrollX: true,
-                    scrollbarX: false,
-                    suppressScrollY: false,
-                    scrollbarY: true,
-                }}
-                style={{ backgroundColor: 'transparent' }} // Fondo transparente
-            >
-                <SidebarNav>
-                    <HomeLink />
-                    <AboutLink />
-                    <ProjectsLink />
-                    
-                    <ToolsLink />
-                    <CertificacionesLink />
-                    <ContactLink />
-                </SidebarNav>
-
-                <style jsx global>{`
-                    /* Cambia el color de la barra de desplazamiento vertical */
-                    .ps__rail-y {
-                        background-color: #000 !important; /* Cambia a tu color deseado, por ejemplo, negro */
-                        
-                    }
-
-                    /* Cambia el color de la barra "corredera" vertical */
-                    .ps__thumb-y {
-                        background-color: "#CCCCCC" !important; 
-                    }
-                `}</style>
-                
-            </PerfectScrollbar>
-            <BurgerButton/>
-
+      <>
+        <StyledButton className="btnToggle" onClick={handleToggle}>
+          {menuToggle ? <FaTimes /> : <FaBars />}
+        </StyledButton>
+        <SidebarWrapper menuToggle={menuToggle}>
+          <ProfileImage src="/images/The choose one.jpg" alt="Foto de perfil" />
+          <SidebarTitle>Facundo Cretton</SidebarTitle>
+          <SidebarSubTitle>Full Stack Developer</SidebarSubTitle>
+          <NavLink to="/" onClick={handleCategoryClick}>
+            Inicio
+          </NavLink>
+          <NavLink to="/about" onClick={handleCategoryClick}>
+            Sobre Mí
+          </NavLink>
+          <NavLink to="/projects" onClick={handleCategoryClick}>
+            Proyectos
+          </NavLink>
+          <NavLink to="/tools" onClick={handleCategoryClick}>
+            Herramientas
+          </NavLink>
+          <NavLink to="/certifications" onClick={handleCategoryClick}>
+            Certificaciones
+          </NavLink>
+          <NavLink to="/contact" onClick={handleCategoryClick}>
+            Contacto
+          </NavLink>
         </SidebarWrapper>
+      </>
     );
-}
-
-export default Sidebar;
+  };
+  
+  export default Sidebar;
