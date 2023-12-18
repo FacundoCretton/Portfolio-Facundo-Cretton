@@ -32,7 +32,7 @@ const Sidebar = () => {
   
     return (
       <>
-        <StyledButton className="btnToggle" onClick={handleToggle}>
+        <StyledButton  onClick={handleToggle}>
           {menuToggle ? <FaTimes /> : <FaBars />}
         </StyledButton>
         <SidebarWrapper menuToggle={menuToggle}>

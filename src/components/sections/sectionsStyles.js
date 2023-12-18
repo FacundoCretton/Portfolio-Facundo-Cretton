@@ -21,7 +21,7 @@ export const PageWrapper = styled.section`
         margin-bottom: 20px;
     }
     @media (max-width: 768px) {
-        margin:auto;
+        margin:50px auto;
 
 
     }

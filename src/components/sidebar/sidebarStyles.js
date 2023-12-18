@@ -2,8 +2,19 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
+  background: none;
+  border: none;
+  color: orange;
+  font-size: 1.5rem;
+  cursor: pointer;
   @media (min-width: 769px) {
     display: none;
+  }
+  @media (max-width: 768px) {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
   }
 `;
 
@@ -51,9 +62,8 @@ export const SidebarWrapper = styled.nav`
   @media (max-width: 768px) {
     width: 100%;
     left: ${({ menuToggle }) => (menuToggle ? '0' : '-100%')};
-    position: fixed; 
-    top: 0; 
-    height: 100%;
+    position: fixed;
+    top: 0;
   }
 `;
 
