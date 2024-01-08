@@ -2,6 +2,12 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
+import {
+  ContactFormWrapper,
+  Form,
+  FormField,
+  SubmitButton,
+} from './contactStyles';
 
 const ContactForm = () => {
   const formik = useFormik({
@@ -18,10 +24,10 @@ const ContactForm = () => {
     onSubmit: async (values) => {
       try {
         await emailjs.send(
-          'service_gmail', // Reemplaza con el nombre de tu servicio en Email.js
-          'template_contact_form', // Reemplaza con el ID de tu plantilla en Email.js
+          'Gmail-Portfolio', // Reemplaza con el nombre de tu servicio en Email.js
+          'service_d91ya91', // Reemplaza con el ID de tu plantilla en Email.js
           values,
-          'tu_user_id' // Reemplaza con tu User ID en Email.js
+          'k01k-XtMnYUy268aT' // Reemplaza con tu User ID en Email.js
         );
 
         alert('Mensaje enviado con éxito');
@@ -34,47 +40,49 @@ const ContactForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <div>
-        <label htmlFor="name">Nombre:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.name}
-        />
-        {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
-      </div>
+    <ContactFormWrapper>
+      <Form onSubmit={formik.handleSubmit}>
+        <FormField>
+          <label htmlFor="name">Nombre:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
+          />
+          {formik.touched.name && formik.errors.name && <div>{formik.errors.name}</div>}
+        </FormField>
 
-      <div>
-        <label htmlFor="email">Correo electrónico:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-        {formik.touched.email && formik.errors.email && <div>{formik.errors.email}</div>}
-      </div>
+        <FormField>
+          <label htmlFor="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+          />
+          {formik.touched.email && formik.errors.email && <div>{formik.errors.email}</div>}
+        </FormField>
 
-      <div>
-        <label htmlFor="message">Mensaje:</label>
-        <textarea
-          id="message"
-          name="message"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.message}
-        />
-        {formik.touched.message && formik.errors.message && <div>{formik.errors.message}</div>}
-      </div>
+        <FormField>
+          <label htmlFor="message">Mensaje:</label>
+          <textarea
+            id="message"
+            name="message"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
+          />
+          {formik.touched.message && formik.errors.message && <div>{formik.errors.message}</div>}
+        </FormField>
 
-      <button type="submit">Enviar</button>
-    </form>
+        <SubmitButton type="submit">Enviar</SubmitButton>
+      </Form>
+    </ContactFormWrapper>
   );
 };
 
