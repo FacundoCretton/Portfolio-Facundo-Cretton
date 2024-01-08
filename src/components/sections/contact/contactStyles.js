@@ -3,11 +3,16 @@ import styled from 'styled-components';
 export const ContactFormWrapper = styled.div`
   max-width: 500px;
   margin: 0 auto;
+  display: block;
 `;
 
 export const Form = styled.form`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 26px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 26px;
+  border-radius: 14px;
+  
 `;
 
 export const FormField = styled.div`

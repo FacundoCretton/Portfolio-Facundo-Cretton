@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
@@ -8,8 +8,11 @@ import {
   FormField,
   SubmitButton,
 } from './contactStyles';
+import { PageWrapper } from '../sectionsStyles';
 
 const ContactForm = () => {
+  const formRef = useRef();
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -23,11 +26,11 @@ const ContactForm = () => {
     }),
     onSubmit: async (values) => {
       try {
-        await emailjs.send(
-          'Gmail-Portfolio', // Reemplaza con el nombre de tu servicio en Email.js
-          'service_d91ya91', // Reemplaza con el ID de tu plantilla en Email.js
-          values,
-          'k01k-XtMnYUy268aT' // Reemplaza con tu User ID en Email.js
+         emailjs.sendForm(
+           'service_d91ya91', // ID de tu plantilla en Email.js
+           'template_8todbpl', // Nombre de tu servicio en Email.js
+          formRef.current, // Utiliza la referencia del formulario
+          'k01k-XtMnYUy268aT' // Tu User ID en Email.js
         );
 
         alert('Mensaje enviado con éxito');
@@ -40,8 +43,10 @@ const ContactForm = () => {
   });
 
   return (
+    <PageWrapper>
+
     <ContactFormWrapper>
-      <Form onSubmit={formik.handleSubmit}>
+      <Form onSubmit={formik.handleSubmit} ref={formRef}>
         <FormField>
           <label htmlFor="name">Nombre:</label>
           <input
@@ -83,6 +88,8 @@ const ContactForm = () => {
         <SubmitButton type="submit">Enviar</SubmitButton>
       </Form>
     </ContactFormWrapper>
+    </PageWrapper>
+
   );
 };
 
