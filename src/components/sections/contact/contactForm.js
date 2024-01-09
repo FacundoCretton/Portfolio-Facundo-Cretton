@@ -4,11 +4,12 @@ import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import {
   ContactFormWrapper,
+  ContactWrapper,
   Form,
   FormField,
   SubmitButton,
 } from './contactStyles';
-import { PageWrapper } from '../sectionsStyles';
+
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -43,7 +44,7 @@ const ContactForm = () => {
   });
 
   return (
-    <PageWrapper>
+    <ContactWrapper>
 
     <ContactFormWrapper>
       <Form onSubmit={formik.handleSubmit} ref={formRef}>
@@ -88,7 +89,7 @@ const ContactForm = () => {
         <SubmitButton type="submit">Enviar</SubmitButton>
       </Form>
     </ContactFormWrapper>
-    </PageWrapper>
+    </ContactWrapper>
 
   );
 };

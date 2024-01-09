@@ -1,9 +1,21 @@
 import styled from 'styled-components';
 
+export const ContactWrapper = styled.div`
+
+margin-left: 250px;
+    margin-top: 50px;
+    @media (max-width: 768px) {
+        margin:50px auto;
+
+
+    }
+
+
+`;
 export const ContactFormWrapper = styled.div`
   max-width: 500px;
   margin: 0 auto;
-  display: block;
+  
 `;
 
 export const Form = styled.form`
