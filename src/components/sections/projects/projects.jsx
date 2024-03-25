@@ -20,7 +20,7 @@ const Projects = () => {
 
   <PageWrapper>
     <div>
-      <h1>Mis proyectos </h1>
+      <h2>Mis proyectos </h2>
       <p> En esta sección podras ver algunos de los proyectos mas destacas que he desarrollado con diferentes herramientas.</p>
     </div>
 

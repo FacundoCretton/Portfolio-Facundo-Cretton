@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Accordion, ListGroup } from "react-bootstrap";
 import styled from "styled-components";
 
 
@@ -43,7 +44,7 @@ export const ModalContainer = styled.div`
         background: linear-gradient(to bottom, #6b6365, #000000);
         font-size: 15px;
         font-weight: 700;
-        color: #e1e1e1;
+        color: red;
              
     }
 
@@ -68,6 +69,15 @@ export const Rogelio = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+
+  h2 {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+
+
+  };
 `;
 
 export const CertContainerWrapper = styled.div`
@@ -79,10 +89,18 @@ export const CertContainerWrapper = styled.div`
 
 
 export const CertificationPreviewContainer = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  h3{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+  
+  }
 
 `;
 
@@ -112,4 +130,38 @@ export const CertificationFrame = styled.img`
   left: 0;
   object-fit: cover;
 
+`;
+
+
+
+export const CustomAccordionItem = styled(Accordion.Item)`
+  
+  border-bottom: 0;
+  text-align: center ;
+`;
+
+
+export const CustomAccordion = styled(Accordion)`
+
+  .accordion-button.collapsed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #cfe2f3;
+  }
+  .accordion-button::after{
+    display: none;
+  } 
+
+  .accordion-button:not(.collapsed){ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+`;
+
+export const LaImagen = styled.img`
+  width: 22px;
+  height: 22px;
 `;

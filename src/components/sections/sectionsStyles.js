@@ -11,14 +11,16 @@ export const PageWrapper = styled.section`
     margin-left: 250px;
     margin-top: 50px;
 
-    h1{
-        font-size: 2.5rem;
+    h2{
+        font-size: 2rem;
         font-weight: bold;
         margin-bottom: 20px;
+        font-family: "Montserrat";
     }
     p{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         margin-bottom: 20px;
+        font-family: "Open Sans";
     }
     @media (max-width: 768px) {
         margin:50px auto;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const AboutText = styled.div`
+export const AboutText = styled.div`
  
   margin: 20px ;
   padding: 20px;
@@ -16,9 +16,10 @@ const AboutText = styled.div`
     font-size: 20px;
   }
 
-  #signature {
-    font-weight: bold;
-  }
 `;
 
-export default AboutText;
+export const Sub = styled.span `
+  font-size: 12px;
+  font-style: italic;
+
+`;

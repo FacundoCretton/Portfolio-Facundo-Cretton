@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const ContactWrapper = styled.div`
 
-margin-left: 250px;
-    margin-top: 50px;
-    @media (max-width: 768px) {
-        margin:50px auto;
+  margin-left: 250px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  @media (max-width: 768px) {
+    margin:50px auto;
 
 
-    }
+  }
 
 
 `;
@@ -33,7 +34,8 @@ export const FormField = styled.div`
   gap: 8px;
 
   label {
-    font-weight: bold;
+    font-family: "Montserrat";
+    font-weight: 500;
   }
 
   input,
@@ -42,10 +44,15 @@ export const FormField = styled.div`
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    resize: none;
+  }
+
+  textarea{
+    height: 150px;
   }
 
   div {
-    color: red; /* Estilo para los mensajes de error */
+    color: red; 
   }
 `;
 
@@ -57,4 +64,5 @@ export const SubmitButton = styled.button`
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
+  font-family: "Poppins";
 `;
