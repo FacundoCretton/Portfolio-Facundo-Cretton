@@ -10,7 +10,7 @@ const Tools = () =>{
     return(
         
         <PageWrapper>
-            <h1>Herramientas y Certificaciones </h1>
+            <h2>Herramientas </h2>
 
             <p>En esta sección podrás ver las herramientas que utilizo para desarrollar mis proyectos.</p>
             <div className="cards-container">
@@ -19,10 +19,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Control de versiones</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos">
-                            <span>
-                                <Image src={skills.versionControl[0].imgSrc} alt={skills.versionControl[0].imgAltText} rounded className="image-style m-1"></Image> <span className="text-img">{skills.versionControl[0].skillName}</span>
-                            </span>
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.versionControl.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -30,10 +37,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Bases de Datos</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos">
-                            <span>
-                                <Image src={skills.database[0].imgSrc} alt={skills.database[0].imgAltText} rounded className="image-style m-1"></Image> <span className="text-img">{skills.database[0].skillName }</span>
-                            </span>
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.database.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -41,10 +55,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Plataformas de Hosting</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos" >
-                            <span>
-                                <Image src={skills.hostingPlatforms[0].imgSrc} alt={skills.hostingPlatforms[0].imgAltText} rounded className="image-style m-1"></Image> <span className="text-img">{skills.hostingPlatforms[0].skillName}</span>
-                            </span>
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.hostingPlatforms.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -52,13 +73,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Backend</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos">
-                           {skills.backend.map((skill, index) =>(
-                            <span key = {index}>
-                                <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image><span className="text-img"> {skill.skillName}</span>
-                                
-                            </span>
-                            ))} 
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.backend.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -66,13 +91,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Frameworks</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos">
-                            {skills.frameworks.map((skill, index) =>(
-                                <span key = {index}>
-                                    <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image> <span className="text-img">{skill.skillName}</span>
-                                
-                                </span>
-                            ))}
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.frameworks.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -80,13 +109,17 @@ const Tools = () =>{
                     <Card.Body>
                         <Card.Title className="card-title">Front End</Card.Title>
                         <hr/>
-                        <Card.Text className="veremos">
-                            {skills.frontend.map((skill, index) =>(
-                                <span key = {index}>
-                                    <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image><span className="text-img"> {skill.skillName}</span>
-                                
-                                </span>
-                            ))}
+                        <Card.Text>
+                            <div className="veremos">
+                                {skills.frontend.map((skill, index) => (
+                                <div className="skills-container" key={index}>
+                                    <div className="image-container">
+                                        <Image src={skill.imgSrc} alt={skill.imgAltText} rounded className="image-style m-1"></Image>
+                                    </div>
+                                        <span>{skill.skillName}</span>
+                                </div>
+                                ))}
+                            </div>
                         </Card.Text>
                     </Card.Body>
                 </Card>

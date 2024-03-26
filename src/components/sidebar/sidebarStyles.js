@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
     font-size: 2rem;
     background: none;
     border: none;
+    
   }
 `;
 
@@ -40,11 +41,12 @@ export const SidebarWrapper = styled.nav`
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding: 10px;
     font-size: 1rem;
     color: #fff;
     background-color: #333;
+    font-family: "Poppins";
 
     &:hover {
       color: #ddd;

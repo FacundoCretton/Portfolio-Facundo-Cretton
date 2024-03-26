@@ -22,8 +22,8 @@ hr {
   max-width: 1200px;
   width: 100%;
   height: 100%;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   gap: 1em;
 }
 
@@ -34,21 +34,26 @@ hr {
 
 .veremos {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   margin: 0 auto;
-  padding: 0 1em;
   max-width: 1000px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  align-content: center;
+
+  span {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 }
 
-.text-img {
+/* .text-img {
   font-size: 15px;
   font-weight: 700;
   text-align: center;
-}
+} */
 
 .bgd-card {
   background: transparent;
@@ -65,4 +70,19 @@ hr {
   .bgd-card {
     flex: none;
   }
+}
+
+.skills-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.image-container {
+  flex: 0 0 auto;
+}
+
+.image-style {
+  width: 40px;
+  height: 40px;
 }
