@@ -18,7 +18,7 @@ export const PageWrapper = styled.section`
         font-family: "Montserrat";
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 20px;
         font-family: "Open Sans";
     }

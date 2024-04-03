@@ -1,4 +1,5 @@
 // sidebarStyles.js
+import Scrollbars from 'react-custom-scrollbars-2';
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
@@ -23,7 +24,7 @@ export const SidebarWrapper = styled.nav`
   position: fixed;
   z-index: 999;
   top: 0;
-  background-color: #000;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,6 +32,7 @@ export const SidebarWrapper = styled.nav`
   overflow-y: auto;
   padding-top: 10px;
   transition: left 0.3s ease-in-out;
+
 
   a {
     margin: 0.5rem 0;
@@ -41,9 +43,7 @@ export const SidebarWrapper = styled.nav`
     align-items: center;
     justify-content: center;
     border: 1px solid #fff;
-    /* font-weight: bold; */
-    padding: 10px;
-    font-size: 1rem;
+    font-size: 13px;
     color: #fff;
     background-color: #333;
     font-family: "Poppins";
@@ -55,7 +55,8 @@ export const SidebarWrapper = styled.nav`
 
     &.active {
       color: #000;
-      background: #d3d3d3;
+      background: #d3d3d3;      
+
     }
   }
 
@@ -96,3 +97,40 @@ export const SidebarSubTitle = styled.h2`
   margin-top: 0.5rem;
   text-align: center;
 `;
+
+
+
+
+
+
+// export const StyledScrollbar = styled(Scrollbars)`
+//   // Estilos para el contenedor de Scrollbars
+//   width: 100%;
+//   height: 100%;
+//   scrollbar-color: blue;
+//   color: red;
+
+//  // Estilos para la corredera vertical
+//  .ScrollbarsCustom-TrackVertical {
+//     background-color: red;
+//   }
+
+//   // Estilos para ocultar la "x" (scrollbar thumb vertical)
+
+
+
+//   // Estilos para el div interno que envuelve los elementos
+//   & > div {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+    
+    
+
+//   }
+  
+
+
+
+// `;

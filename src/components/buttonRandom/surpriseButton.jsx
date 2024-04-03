@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 
 const SurpriseButton = ({ onClick, disabled }) => {
   const [isRolling, setRolling] = useState(false);
+  
 
   useEffect(() => {
     let interval;
@@ -25,9 +27,9 @@ const SurpriseButton = ({ onClick, disabled }) => {
   };
 
   return (
-    <button onClick={handleClick} disabled={disabled}>
+    <Button onClick={handleClick} disabled={disabled}>
       Conóceme
-    </button>
+    </Button>
   );
 };
 
