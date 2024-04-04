@@ -1,5 +1,4 @@
 // sidebarStyles.js
-import Scrollbars from 'react-custom-scrollbars-2';
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
@@ -32,6 +31,23 @@ export const SidebarWrapper = styled.nav`
   overflow-y: auto;
   padding-top: 10px;
   transition: left 0.3s ease-in-out;
+ 
+  ::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+  background: black;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+
+}
 
 
   a {

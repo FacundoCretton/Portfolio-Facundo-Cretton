@@ -11,7 +11,6 @@ import { Accordion, ListGroup } from "react-bootstrap";
 import MarcoImage from "./cert-img/marco.png";
 
 const pensador= "./pensador.png";
-const nerd= "./nerd.png";
 
 const certificationsData = [
   {
@@ -59,10 +58,8 @@ const CertificationPreview = ({ title, imageSrc, description }) => {
         <CertificationImage
           src={imageSrc}
           alt={title}
-          style={{ width: "300px", cursor: "pointer", zIndex: "1" }}
+          style={{ width: "300px", cursor: "pointer", zIndex: "1", margin:"30px 0", }}
           onClick={handleImageClick}
-          initial={{ scale: 1 }}
-          whileHover={{ scale: 1.1 }}
         />
           <CertificationFrame
             src={MarcoImage}
@@ -71,13 +68,12 @@ const CertificationPreview = ({ title, imageSrc, description }) => {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              borderRadius: "10px",
+              borderRadius: "15px",
               pointerEvents: "none",
               position: "absolute",
               zIndex: 0,
             }}
-            initial={{ scale: 1 }}
-            whileHover={{ scale: 1.1 }}
+
           />
         </CertificationContainer>
         <AnimatePresence>
@@ -90,7 +86,6 @@ const CertificationPreview = ({ title, imageSrc, description }) => {
             >
               <ModalContainer
                 initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.5, opacity: 0 }}
                 onClick={(e) => e.stopPropagation()}
                 transition={{ duration: 0.3 }}
@@ -106,10 +101,7 @@ const CertificationPreview = ({ title, imageSrc, description }) => {
                   src={imageSrc}
                   alt={title}
                   style={{ width: "100%" }}
-                  initial={{ scale: 0.5 }}
-                  animate={{ scale: 1 }}
-                  exit={{ scale: 0.5 }}
-                  transition={{ duration: 0.3 }}
+  
                 />
               
               </ModalContainer>

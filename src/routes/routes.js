@@ -1,7 +1,6 @@
 import Projects from "../components/sections/projects/projects";
 import Tools from "../components/sections/skills/tools";
 import Contact from "../components/sections/contact/contactForm";
-import Sidebar from "../components/sidebar/sidebar";
 import { Routes, Route } from "react-router-dom";
 import Home from "../components/sections/home/home";
 import Certifications from "../components/sections/certifications/certifications";
@@ -29,7 +28,6 @@ function AppRoutes (){
 function Main(){
     return(
         <>
-        <Sidebar/>
         <Home/>
     
         </>

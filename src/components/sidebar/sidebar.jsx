@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { ProfileImage, SidebarSubTitle, SidebarTitle, SidebarWrapper, StyledButton,StyledScrollbar } from "./sidebarStyles";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Scrollbars } from 'react-custom-scrollbars-2';
 
 const Sidebar = () => {
     const [menuToggle, setMenuToggle] = useState(false);
@@ -32,9 +31,10 @@ const Sidebar = () => {
   
     return (
       <>
-        <StyledButton  onClick={handleToggle}>
-          {menuToggle ? <FaTimes /> : <FaBars />}
-        </StyledButton>
+      <StyledButton onClick={handleToggle}>
+        {menuToggle ? <FaTimes /> : <FaBars />}
+      </StyledButton>
+
         <SidebarWrapper menuToggle={menuToggle}>
         {/* <StyledScrollbar> */}
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Accordion, ListGroup } from "react-bootstrap";
+import { Accordion } from "react-bootstrap";
 import styled from "styled-components";
 
 
@@ -58,7 +58,7 @@ export const CertContainer = styled.div`
   justify-content: center;
 
   > div {
-    flex: 0 0 48%; /* Ajusta este valor para controlar el ancho de cada certificado */
+    flex: 0 0 48%; 
     margin: 10px;
   }
 `;
@@ -107,21 +107,18 @@ export const CertificationPreviewContainer = styled.div`
 
 export const CertificationContainer = styled.div`
   position: relative;
-  width: 300px; /* Ajusta el ancho según sea necesario */
+  width: 300px; 
   height: auto;
-  margin-bottom: 20px; /* Espacio entre la imagen y el Accordion */
+  margin-bottom: 20px; 
 `;
 
 export const CertificationImage = styled(motion.img)`
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Bordes redondeados */
+  border-radius: 10px; 
   cursor: pointer;
   z-index: 1000;
 
-  &:hover {
-    scale: 1.1;
-  }
 `;
 
 export const CertificationFrame = styled.img`

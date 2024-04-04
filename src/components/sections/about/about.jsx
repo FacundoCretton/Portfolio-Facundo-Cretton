@@ -9,10 +9,8 @@ import ProgressBar from './ProgressBar'; // Importa el componente ProgressBar
 const About = () => {
   const [currentData, setCurrentData] = useState(aboutData[0]);
   const [showNextCard, setShowNextCard] = useState(false);
-  const [loading, setLoading] = useState(loadingData[0]);
+  const [loadingIndex, setLoadingIndex] = useState(loadingData.length - 1);
 
-
-  
   const handleSurpriseButtonClick = () => {
     setShowNextCard(true);
     setTimeout(() => {
@@ -21,7 +19,11 @@ const About = () => {
       setShowNextCard(false);
     }, 2000);
   };
-  
+
+  const changeLoadingText = () => {
+    const newIndex = (loadingIndex + 1) % loadingData.length;
+    setLoadingIndex(newIndex);
+  };
 
   return (
     <PageWrapper>
@@ -35,13 +37,12 @@ const About = () => {
 
       <ContainerCard>
         {showNextCard ? (
-          <DataCard>Buscando un dato que te cautive...<ProgressBar /> </DataCard>
+          <DataCard>{loadingData[loadingIndex]}<ProgressBar /> </DataCard>
         ) : (
           <DataCard>
             {currentData && (
               <>
                 <div>{currentData}</div>
-
               </>
             )}
           </DataCard>
@@ -52,5 +53,3 @@ const About = () => {
 };
 
 export default About;
-
-
