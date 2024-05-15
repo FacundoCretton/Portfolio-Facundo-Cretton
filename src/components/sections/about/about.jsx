@@ -9,7 +9,7 @@ import ProgressBar from './ProgressBar'; // Importa el componente ProgressBar
 const About = () => {
   const [currentData, setCurrentData] = useState(aboutData[0]);
   const [showNextCard, setShowNextCard] = useState(false);
-  const [loadingIndex, setLoadingIndex] = useState(loadingData.length - 1);
+  const [loadingIndex, setLoadingIndex] = useState(loadingData.length - 3);
 
   const handleSurpriseButtonClick = () => {
     setShowNextCard(true);
@@ -27,10 +27,14 @@ const About = () => {
 
   return (
     <PageWrapper>
-      <h1>¿Quién soy?</h1>
+      <h2>¿Quién soy?</h2>
       <AboutText>
         <Sub>
-          ¡Hola! Soy Facundo Cretton, un apasionado desarrollador de 32 años con una historia única que ha moldeado mi camino hacia el mundo de la tecnología.
+        ¡Hola! Soy Facundo Cretton, un desarrollador web con una historia única que me ha llevado al mundo de la tecnología.
+
+        Voy a intentar no ir por el lado convencional. No te diré que soy "muy proactivo" o "muy responsable". Prefiero demostrarlo en lugar de decirlo.
+
+        Si quieres conocer un poco más sobre mí, haz clic en el botón de abajo. Te mostraré algunos datos sobre mí
         </Sub>
       </AboutText>
       <SurpriseButton onClick={handleSurpriseButtonClick} disabled={showNextCard} />

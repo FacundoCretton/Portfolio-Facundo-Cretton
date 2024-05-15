@@ -1,6 +1,7 @@
 .card-title {
-  font-size: 1em;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins";
 }
 hr {
   border: 0;
@@ -44,7 +45,7 @@ hr {
   align-content: center;
 
   span {
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 600;
     font-family: "Open Sans";
   }

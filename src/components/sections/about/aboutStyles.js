@@ -5,22 +5,23 @@ export const AboutText = styled.div`
   margin: 20px ;
   padding: 20px;
   border-radius: 8px;
-  font-family: 'Arial', sans-serif;
   line-height: 1.6;
   
 
 
   p {
-    margin-bottom: 15px;
-    text-align: justify;
-    font-size: 20px;
-  }
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    padding: 0 20px;
+  };
 
 `;
 
 export const Sub = styled.span `
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 15px;
   font-family: "Open Sans";
 
 `;
@@ -46,11 +47,13 @@ export const ContainerCard = styled.div`
   border: 1px solid #C99E5A;
   border-radius: 15px;
   margin-top: 20px;
+  margin-bottom: 30px;
   width: 50%;
   min-height: 150px; 
   display:flex ;
   justify-content: center;
   align-items: center;
+  
   
 `;
 
@@ -89,3 +92,4 @@ export const SpanImage = styled.span`
   border-bottom: 1px solid brown;
   margin-top: 10px;
 `;
+

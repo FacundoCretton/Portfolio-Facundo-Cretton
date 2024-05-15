@@ -11,7 +11,7 @@ const HomePage = () =>{
 
     return(
         <PageWrapper>
-            <h1>FACUNDO CRETTON </h1>
+            <h2>FACUNDO CRETTON </h2>
            <p> <Type/> </p>
             <p>HTML | CSS | JavaScript | React | Redux | NodeJS | Express | MongoDB</p>
 

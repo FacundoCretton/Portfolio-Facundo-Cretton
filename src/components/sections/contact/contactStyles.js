@@ -5,6 +5,24 @@ export const ContactWrapper = styled.div`
   margin-left: 250px;
   margin-top: 20px;
   margin-bottom: 20px;
+
+  h2 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+  }
+
+  p{
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+
+
+  }
   @media (max-width: 768px) {
     margin:50px auto;
 

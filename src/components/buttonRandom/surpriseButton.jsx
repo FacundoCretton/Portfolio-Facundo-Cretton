@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { StyledButton } from './surpriseButtonStyles';
 
 const SurpriseButton = ({ onClick, disabled }) => {
   const [isRolling, setRolling] = useState(false);
@@ -27,9 +27,9 @@ const SurpriseButton = ({ onClick, disabled }) => {
   };
 
   return (
-    <Button onClick={handleClick} disabled={disabled}>
+    <StyledButton className='rainbow-button' onClick={handleClick} disabled={disabled}>
       Conóceme
-    </Button>
+    </StyledButton>
   );
 };
 

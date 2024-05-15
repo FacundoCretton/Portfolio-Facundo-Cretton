@@ -11,17 +11,22 @@ export const PageWrapper = styled.section`
     margin-left: 250px;
     margin-top: 50px;
 
-    h2{
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 20px;
-        font-family: "Montserrat";
-    }
-    p{
-        font-size: 1rem;
-        margin-bottom: 20px;
-        font-family: "Open Sans";
-    }
+    h2 {
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+  };
+
+  p {
+    font-family: "Open Sans";
+    font-weight: 300;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    padding: 0 20px;
+  };
     @media (max-width: 768px) {
         margin:50px auto;
 

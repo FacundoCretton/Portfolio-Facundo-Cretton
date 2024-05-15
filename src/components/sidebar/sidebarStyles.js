@@ -85,18 +85,33 @@ export const SidebarWrapper = styled.nav`
 `;
 
 export const ProfileImage = styled.img`
-  width: 60%;
-  height: 150px;
-  object-fit: cover;
+  width: 80%;
+  height: 100%;
+  /* object-fit: cover; */
   object-position: center;
-  border-radius: 50%;
+  border-radius: 10px;
   border: 1px solid #000;
   margin: 1rem auto;
+  
+  @media (max-width: 768px) {
+
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const ProfileImageDiv = styled.div`
+  width: 180px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (max-width: 768px) {
 
-    width: 30%;
-    height: 40%;
+    width: 200px;
+    height: 250px;
+
   }
 `;
 

@@ -58,8 +58,10 @@ export const CertContainer = styled.div`
   justify-content: center;
 
   > div {
-    flex: 0 0 48%; 
+    /* flex: 0 0 48%;  */
     margin: 10px;
+    width: 80%;
+
   }
 `;
 
@@ -70,14 +72,6 @@ export const Rogelio = styled.div`
   justify-content: center;
   width: 100%;
 
-  h2 {
-    font-family: "Montserrat";
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-
-
-  };
 `;
 
 export const CertContainerWrapper = styled.div`
@@ -96,8 +90,8 @@ export const CertificationPreviewContainer = styled.div`
 
   h3{
     font-family: 'Montserrat';
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 500;
     margin-bottom: 25px;
   
   }
@@ -135,6 +129,7 @@ export const CustomAccordionItem = styled(Accordion.Item)`
   
   border-bottom: 0;
   text-align: center ;
+  
 `;
 
 
@@ -145,6 +140,7 @@ export const CustomAccordion = styled(Accordion)`
     align-items: center;
     justify-content: center;
     background: #cfe2f3;
+    
   }
   .accordion-button::after{
     display: none;
@@ -162,3 +158,14 @@ export const LaImagen = styled.img`
   width: 22px;
   height: 22px;
 `;
+
+export const CustomAccordionBody = styled(Accordion.Body)`
+  
+  p{
+    font-size: 0.8rem;
+    font-family: "Poppins";
+  }
+
+
+`;
+

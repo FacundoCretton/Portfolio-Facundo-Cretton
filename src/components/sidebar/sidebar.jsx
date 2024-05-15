@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { ProfileImage, SidebarSubTitle, SidebarTitle, SidebarWrapper, StyledButton,StyledScrollbar } from "./sidebarStyles";
+import { ProfileImage, ProfileImageDiv, SidebarSubTitle, SidebarTitle, SidebarWrapper, StyledButton,StyledScrollbar } from "./sidebarStyles";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -38,7 +38,7 @@ const Sidebar = () => {
         <SidebarWrapper menuToggle={menuToggle}>
         {/* <StyledScrollbar> */}
 
-            <ProfileImage src="/images/The choose one.jpg" alt="Foto de perfil" />
+            <ProfileImageDiv><ProfileImage src="/images/ImagenR.jpg" alt="Foto de perfil" /></ProfileImageDiv>
             <SidebarTitle>Facundo Cretton</SidebarTitle>
             <SidebarSubTitle>Full Stack Developer</SidebarSubTitle>
 
@@ -67,3 +67,10 @@ const Sidebar = () => {
   };
   
   export default Sidebar;
+
+
+
+
+
+
+  

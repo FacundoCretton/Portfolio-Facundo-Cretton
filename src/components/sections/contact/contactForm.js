@@ -10,7 +10,6 @@ import {
   SubmitButton,
 } from './contactStyles';
 
-
 const ContactForm = () => {
   const formRef = useRef();
 
@@ -45,6 +44,8 @@ const ContactForm = () => {
 
   return (
     <ContactWrapper>
+    <h2>Contacto</h2>
+    <p>Si tenes alguna pregunta o comentario, no dudes en contactarme.</p>
 
     <ContactFormWrapper>
       <Form onSubmit={formik.handleSubmit} ref={formRef}>
